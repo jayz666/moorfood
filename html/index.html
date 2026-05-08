@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoorFood - Advanced Eating System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="moorfood-container">
+        <header class="moorfood-header">
+            <div class="logo">
+                <img src="assets/logo.png" alt="MoorFood" class="logo-img">
+                <h1>MoorFood</h1>
+                <p>The Ultimate Eating Experience</p>
+            </div>
+            <div class="status-display">
+                <div class="status-item">
+                    <span class="status-icon">🍔</span>
+                    <div class="status-bar">
+                        <div class="status-fill hunger-fill" id="hunger-bar"></div>
+                    </div>
+                    <span class="status-value" id="hunger-value">100%</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-icon">💧</span>
+                    <div class="status-bar">
+                        <div class="status-fill thirst-fill" id="thirst-bar"></div>
+                    </div>
+                    <span class="status-value" id="thirst-value">100%</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="moorfood-main">
+            <div class="food-categories">
+                <div class="category" data-category="fastfood">
+                    <div class="category-header">
+                        <span class="category-icon">🍔</span>
+                        <h3>Fast Food</h3>
+                    </div>
+                    <div class="category-items">
+                        <div class="food-item" data-item="burger">
+                            <div class="item-image">
+                                <img src="assets/burger.png" alt="Burger">
+                            </div>
+                            <div class="item-info">
+                                <h4>Classic Burger</h4>
+                                <div class="item-stats">
+                                    <span class="stat hunger">🍔 +25</span>
+                                    <span class="stat health">❤️ +5</span>
+                                    <span class="stat price">$150</span>
+                                </div>
+                            </div>
+                            <button class="eat-btn" data-item="burger">Eat</button>
+                        </div>
+                        <div class="food-item" data-item="pizza">
+                            <div class="item-image">
+                                <img src="assets/pizza.png" alt="Pizza">
+                            </div>
+                            <div class="item-info">
+                                <h4>Pizza Slice</h4>
+                                <div class="item-stats">
+                                    <span class="stat hunger">🍔 +35</span>
+                                    <span class="stat health">❤️ +8</span>
+                                    <span class="stat price">$200</span>
+                                </div>
+                            </div>
+                            <button class="eat-btn" data-item="pizza">Eat</button>
+                        </div>
+                        <div class="food-item" data-item="hotdog">
+                            <div class="item-image">
+                                <img src="assets/hotdog.png" alt="Hot Dog">
+                            </div>
+                            <div class="item-info">
+                                <h4>Hot Dog</h4>
+                                <div class="item-stats">
+                                    <span class="stat hunger">🍔 +20</span>
+                                    <span class="stat health">❤️ +3</span>
+                                    <span class="stat price">$100</span>
+                                </div>
+                            </div>
+                            <button class="eat-btn" data-item="hotdog">Eat</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category" data-category="drinks">
+                    <div class="category-header">
+                        <span class="category-icon">🥤</span>
+                        <h3>Drinks</h3>
+                    </div>
+                    <div class="category-items">
+                        <div class="food-item" data-item="water">
+                            <div class="item-image">
+                                <img src="assets/water.png" alt="Water">
+                            </div>
+                            <div class="item-info">
+                                <h4>Bottled Water</h4>
+                                <div class="item-stats">
+                                    <span class="stat thirst">💧 +30</span>
+                                    <span class="stat health">❤️ +2</span>
+                                    <span class="stat price">$50</span>
+                                </div>
+                            </div>
+                            <button class="drink-btn" data-item="water">Drink</button>
+                        </div>
+                        <div class="food-item" data-item="soda">
+                            <div class="item-image">
+                                <img src="assets/soda.png" alt="Soda">
+                            </div>
+                            <div class="item-info">
+                                <h4>Soda Can</h4>
+                                <div class="item-stats">
+                                    <span class="stat thirst">💧 +25</span>
+                                    <span class="stat health">❤️ +1</span>
+                                    <span class="stat price">$75</span>
+                                </div>
+                            </div>
+                            <button class="drink-btn" data-item="soda">Drink</button>
+                        </div>
+                        <div class="food-item" data-item="coffee">
+                            <div class="item-image">
+                                <img src="assets/coffee.png" alt="Coffee">
+                            </div>
+                            <div class="item-info">
+                                <h4>Coffee Cup</h4>
+                                <div class="item-stats">
+                                    <span class="stat thirst">💧 +20</span>
+                                    <span class="stat health">❤️ +3</span>
+                                    <span class="stat price">$80</span>
+                                </div>
+                            </div>
+                            <button class="drink-btn" data-item="coffee">Drink</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category" data-category="healthy">
+                    <div class="category-header">
+                        <span class="category-icon">🥗</span>
+                        <h3>Healthy</h3>
+                    </div>
+                    <div class="category-items">
+                        <div class="food-item" data-item="salad">
+                            <div class="item-image">
+                                <img src="assets/salad.png" alt="Salad">
+                            </div>
+                            <div class="item-info">
+                                <h4>Fresh Salad</h4>
+                                <div class="item-stats">
+                                    <span class="stat hunger">🍔 +15</span>
+                                    <span class="stat thirst">💧 +10</span>
+                                    <span class="stat health">❤️ +10</span>
+                                    <span class="stat price">$120</span>
+                                </div>
+                            </div>
+                            <button class="eat-btn" data-item="salad">Eat</button>
+                        </div>
+                        <div class="food-item" data-item="apple">
+                            <div class="item-image">
+                                <img src="assets/apple.png" alt="Apple">
+                            </div>
+                            <div class="item-info">
+                                <h4>Apple</h4>
+                                <div class="item-stats">
+                                    <span class="stat hunger">🍔 +10</span>
+                                    <span class="stat thirst">💧 +5</span>
+                                    <span class="stat health">❤️ +5</span>
+                                    <span class="stat price">$40</span>
+                                </div>
+                            </div>
+                            <button class="eat-btn" data-item="apple">Eat</button>
+                        </div>
+                        <div class="food-item" data-item="banana">
+                            <div class="item-image">
+                                <img src="assets/banana.png" alt="Banana">
+                            </div>
+                            <div class="item-info">
+                                <h4>Banana</h4>
+                                <div class="item-stats">
+                                    <span class="stat hunger">🍔 +12</span>
+                                    <span class="stat thirst">💧 +8</span>
+                                    <span class="stat health">❤️ +6</span>
+                                    <span class="stat price">$35</span>
+                                </div>
+                            </div>
+                            <button class="eat-btn" data-item="banana">Eat</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category" data-category="gourmet">
+                    <div class="category-header">
+                        <span class="category-icon">🍽️</span>
+                        <h3>Gourmet</h3>
+                    </div>
+                    <div class="category-items">
+                        <div class="food-item" data-item="steak">
+                            <div class="item-image">
+                                <img src="assets/steak.png" alt="Steak">
+                            </div>
+                            <div class="item-info">
+                                <h4>Grilled Steak</h4>
+                                <div class="item-stats">
+                                    <span class="stat hunger">🍔 +40</span>
+                                    <span class="stat health">❤️ +15</span>
+                                    <span class="stat price">$350</span>
+                                </div>
+                            </div>
+                            <button class="eat-btn" data-item="steak">Eat</button>
+                        </div>
+                        <div class="food-item" data-item="pasta">
+                            <div class="item-image">
+                                <img src="assets/pasta.png" alt="Pasta">
+                            </div>
+                            <div class="item-info">
+                                <h4>Pasta Dish</h4>
+                                <div class="item-stats">
+                                    <span class="stat hunger">🍔 +35</span>
+                                    <span class="stat health">❤️ +12</span>
+                                    <span class="stat price">$280</span>
+                                </div>
+                            </div>
+                            <button class="eat-btn" data-item="pasta">Eat</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category" data-category="energy">
+                    <div class="category-header">
+                        <span class="category-icon">⚡</span>
+                        <h3>Energy</h3>
+                    </div>
+                    <div class="category-items">
+                        <div class="food-item" data-item="energydrink">
+                            <div class="item-image">
+                                <img src="assets/energy.png" alt="Energy Drink">
+                            </div>
+                            <div class="item-info">
+                                <h4>Energy Drink</h4>
+                                <div class="item-stats">
+                                    <span class="stat thirst">💧 +20</span>
+                                    <span class="stat effect">⚡ Speed Boost</span>
+                                    <span class="stat price">$90</span>
+                                </div>
+                            </div>
+                            <button class="drink-btn" data-item="energydrink">Drink</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
