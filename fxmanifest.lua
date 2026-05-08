@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'MoorFood Systems'
+author 'moorgaming'
 version '1.0.0'
 description 'The most advanced eating and drinking system for FiveM'
 
